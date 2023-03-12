@@ -4,47 +4,93 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
     <title>Accordion</title>
     <link href="index.css" rel="stylesheet"> 
 </head>
-<body>
+<body class="page">
+    <svg display="none" xmlns="http://www.w3.org/2000/svg">
+        <symbol id="plus" viewBox="0 0 24 24">
+            <g>
+                <path  d="M5 12H19"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path  d="M12 5L12 19"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </g>
+        </symbol>
+    </svg>
     <div class="container">
         <div class="accordion__container">
             <h1 class="main__header">CSS Bayan</h1>
             <div class="accordion">
                 <div class="accordion__item">
-                    <label class="accordion__title" for="rachmaninoff">Сергей Васильевич Рахманинов</label>
-                    <input class="accordion__input" type="radio" name="accordion" id="rachmaninoff">
+                    <input class="accordion__input" type="checkbox"  id="rachmaninoff">
+                    <div class="title__container">
+                        <label class="accordion__title" for="rachmaninoff">Сергей Васильевич Рахманинов</label>
+                        <div class="icon__container">
+                            <svg class="icon">
+                                <use href="#plus"></use>
+                            </svg>
+                        </div>
+                    </div>
                     <div class="accordion__img">
-                        <img src="assets/rachmaninoff.png" alt="Sergei Vasilyevich Rachmaninoff" width="150" height="150">
+                        <img class="image" src="assets/rachmaninoff.png" alt="Sergei Vasilyevich Rachmaninoff" width="250" height="250">
                     </div>
                 </div>
                 <div class="accordion__item">
-                    <label class="accordion__title" for="scriabin">Александр Николаевич Скрябин</label>
-                    <input class="accordion__input" type="radio" name="accordion" id="scriabin">
+                    <input class="accordion__input" type="checkbox"  id="scriabin">
+                    <div class="title__container">
+                        <label class="accordion__title" for="scriabin">Александр Николаевич Скрябин</label>
+                        <div class="icon__container">
+                            <svg class="icon">
+                                <use href="#plus"></use>
+                            </svg>
+                        </div>
+                    </div>
                     <div class="accordion__img">
-                        <img src="assets/scriabin.png" alt="Alexander Nikolayevich Scriabin" width="150" height="150">
+                        <img class="image" src="assets/scriabin.png" alt="Alexander Nikolayevich Scriabin" width="250" height="250">
                     </div>
                 </div>
                 <div class="accordion__item">
-                    <label class="accordion__title" for="stravinsky">Игорь Фёдорович Стравинский</label>
-                    <input class="accordion__input" type="radio" name="accordion" id="stravinsky">
+                    <input class="accordion__input" type="checkbox"  id="stravinsky">
+                    <div class="title__container">
+                        <label class="accordion__title" for="stravinsky">Игорь Фёдорович Стравинский</label>
+                        <div class="icon__container">
+                            <svg class="icon">
+                                <use href="#plus"></use>
+                            </svg>
+                        </div>
+                    </div>
                     <div class="accordion__img">
-                        <img src="assets/stravinsky.png" alt="Igor Fyodorovich Stravinsky" width="150" height="150">
+                        <img class="image" src="assets/stravinsky.png" alt="Igor Fyodorovich Stravinsky" width="250" height="250">
                     </div>
                 </div>
                 <div class="accordion__item">
-                    <label class="accordion__title" for="shostakovich">Дмиитрий Дмитриевич Шостакоович</label>
-                    <input class="accordion__input" type="radio" name="accordion" id="shostakovich">
+                    <input class="accordion__input" type="checkbox"  id="shostakovich">
+                    <div class="title__container">
+                    <label class="accordion__title" for="shostakovich">Дмиитрий Дмитриевич Шостакович</label>
+                    <div class="icon__container">
+                        <svg class="icon">
+                            <use href="#plus"></use>
+                        </svg>
+                    </div>    
+                    </div>
                     <div class="accordion__img">
-                        <img src="assets/shostakovich.png" alt="Dmitri Dmitriyevich Shostakovich" width="150" height="150">
+                        <img class="image" src="assets/shostakovich.png" alt="Dmitri Dmitriyevich Shostakovich" width="250" height="250">
                     </div>
                 </div>
                 <div class="accordion__item">
+                    <input class="accordion__input" type="checkbox"  id="tchaikovsky">
+                    <div class="title__container">
                     <label class="accordion__title" for="tchaikovsky">Пётр Ильич Чайковский</label>
-                    <input class="accordion__input" type="radio" name="accordion" id="tchaikovsky">
+                    <div class="icon__container">
+                        <svg class="icon">
+                            <use href="#plus"></use>
+                        </svg>
+                    </div>
+                    </div>
                     <div class="accordion__img">
-                        <img src="assets/tchaikovsky.png" alt="Pyotr Ilyich Tchaikovsky" width="150" height="150">
+                        <img class="image" src="assets/tchaikovsky.png" alt="Pyotr Ilyich Tchaikovsky" width="250" height="250">
                     </div>
                 </div>
             </div>
