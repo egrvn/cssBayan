@@ -14,6 +14,7 @@
     flex-direction: column;
     width: 50%;
     transition: 0.3s ease-in-out;
+    cursor: pointer;
 }
 .icon {
     visibility: hidden;
@@ -33,16 +34,17 @@
 }
 .accordion__item {
     border: 1px solid rgb(164, 156, 177);
+    cursor: pointer;
 }
 .accordion__container:hover .icon {
     visibility: visible;
-} 
+}
 .title__container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 10px;
-    transition: 0.3s ease-in-out;
+    cursor: pointer;
 }
 .icon__container {
     margin-right: 20px;
@@ -57,20 +59,35 @@
     padding: 15px 15px;
     font-size: 24px;
     font-weight: 400;
-    color: rgb(225, 228, 231);
+    color: aliceblue;
     transition: 0.5s ease-out;
+    cursor: pointer;
+}
+.accordion__input:not(:checked) + .title__container .accordion__title {
+    color: rgb(95, 12, 248);
+}
+.accordion__input:checked + .title__container .accordion__title:hover {
+    color: rgb(0, 0, 0);
+}
+.accordion__input:checked + .title__container .accordion__title {
+    color: aliceblue;
+}
+.accordion__container:hover .title__container .accordion__title {
+    color: aliceblue;
+}
+.accordion__container:hover .title__container .accordion__title:hover {
+    color: rgb(0, 0, 0);
 }
 .title__container:hover {
     background-color: aliceblue;
-}
-.title__container:hover .accordion__title {
-    color: black;
 }
 .title__container:hover .icon {
     stroke: black;
     visibility: visible;
 }
 .accordion__img {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 15px 15px;
@@ -79,20 +96,71 @@
 }
 .image {
     border: 0.5px solid rgb(165, 166, 167);
-    margin-bottom: 10px;
+    filter: blur(1px);
+    transition: all 0.3s ease-in-out;
+}
+.image:hover {
+    border: 0.5px solid rgb(95, 12, 248);
+    filter: blur(0);
+}
+.accordion__text {
+    font-size: 12px;
+    font-weight: 400;
+    color: aliceblue;
+    padding: 20px 70px;
+    letter-spacing: 1px;
+    border-top: 1px solid aliceblue;
 }
 .accordion__input:checked ~ .accordion__img {
     display: flex;
 }
+.accordion__input:checked ~ .accordion__img .image:not() {
+    display: none;
+}
 .accordion__input:checked + .title__container .icon {
     transform: rotate(45deg);
 }
-
 @keyframes show {
     from {
     opacity: 0;
     }
     to {
     opacity: 1;
+    }
+}
+@media (max-width: 850px) {
+    .main__header {
+        font-size: 24px;
+    }
+    .accordion__title {
+        font-size: 16px;
+    }
+    .accordion__text {
+        font-size: 12px;
+        padding: 20px 20px;
+    }
+}
+@media (max-width: 580px) {
+    .image {
+        width: 150px;
+        height: 150px;
+    }
+    .main__header {
+        font-size: 18px;
+    }
+    .accordion__title {
+        font-size: 14px; 
+    }
+    .accordion__text {
+        font-size: 10px;
+    }
+}
+@media (max-width: 420px) {
+    .image {
+        width: 100px;
+        height: 100px;
+    }
+    .accordion__text {
+        font-size: 8px;
     }
 }
