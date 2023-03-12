@@ -1,0 +1,21 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+}
+.accordion__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 50%;
+}
+.main__header {
+    font-size: 32px;
+    font-weight: 700;
+}
+.accordion__title {
+    font-size: 18px;
+    font-weight: 700;
+}
